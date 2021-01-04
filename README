@@ -1,4 +1,6 @@
-#Cli Progressbar It’s a lightweight and easy to use progress-bar for
+#Cli Progressbar
+
+It’s a lightweight and easy to use progress-bar for
 command-line/terminal applications.
 
 Install

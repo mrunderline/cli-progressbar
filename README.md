@@ -1,10 +1,13 @@
 #Cli Progressbar
+
 It's a lightweight and easy to use progress-bar for command-line/terminal applications.
 
 ## Install
+
 `pip install cli-progressbar`
 
 ## Features
+
 * **Simple**, **Lightweight** and **Easy** to use.
 * Single progressbar mode
 * Custom Bar Characters
@@ -58,6 +61,7 @@ for user in progressbar.iterate(users, lambda user: 'processing ' + user):
 ```
 
 ## Parameters
+
 * `goal` to change goal in between of process, it's useful for dynamic tasks
 * `bar_len` length of progressbar (default: 60)
 * `fill` bar fill symbol (default: █)
@@ -65,7 +69,9 @@ for user in progressbar.iterate(users, lambda user: 'processing ' + user):
 * `decimals` positive number of decimals in percent complete  (default: 1)
 
 ## Any Questions? Report a Bug? Enhancements?
+
 Please open a new issue on [GitHub](https://github.com/mrunderline/cli-progressbar/issues)
 
 ## License
+
 CLI-Progress is OpenSource and licensed under the terms of [The MIT License (X11)](http://opensource.org/licenses/MIT). You're welcome to [contribute](https://github.com/mrunderline/cli-progressbar/blob/master/CONTRIBUTE.md)!
