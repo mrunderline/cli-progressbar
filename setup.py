@@ -5,7 +5,7 @@ from importlib import import_module
 setup(
     name='cli_progressbar',
     packages=['cli_progressbar'],
-    version=import_module('console_progressbar').__version__,
+    version=import_module('cli_progressbar').__version__,
     license='MIT',
     description='lightweight library to print progress bar in cli',
     author='Ali Madihi (mrunderline)',
