@@ -3,11 +3,11 @@
 lightweight library to print progress bar in cli
 """
 import sys
-from cli_progressbar.progressbar import Progress
+from cli_progressbar.progressbar import Progress, MultiProgressManager
 
 __author__ = 'Ali Madihi (mrunderline)'
-__version__ = '1.0.2'
-__date__ = '2021-01-04'
+__version__ = '1.1.0'
+__date__ = '2021-01-15'
 
 _DEBUG_MODE = False
 
