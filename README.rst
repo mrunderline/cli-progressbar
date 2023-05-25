@@ -132,6 +132,7 @@ Parameters
 -  ``zfill`` bar zero fill symbol (default: -)
 -  ``decimals`` positive number of decimals in percent complete
    (default: 1)
+-  ``formatter`` a function that formats the count and goal, useful for handling large numbers like file sizes
 
 Any Questions? Report a Bug? Enhancements?
 ------------------------------------------

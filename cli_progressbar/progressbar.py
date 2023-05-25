@@ -16,6 +16,7 @@ class Progress:
         self.fill = '█'
         self.zfill = '-'
         self.decimals = 1
+        self.formatter = lambda x: x
 
     def set_status(self, status: str):
         if status == self.status:
@@ -32,7 +33,7 @@ class Progress:
         percents = round(100.0 * count / float(self.goal), self.decimals)
         bar = self.fill * filled_len + self.zfill * (self.bar_len - filled_len)
 
-        text = '[%s] %s%s | %s/%s' % (bar, percents, '%', count, self.goal)
+        text = '[%s] %s%s | %s/%s' % (bar, percents, '%', self.formatter(count), self.formatter(self.goal))
         if self.showing_status:
             text += ' | %s' % self.showing_status
 
