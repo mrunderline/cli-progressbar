@@ -10,20 +10,17 @@ class Progress:
     def __init__(self, goal: int = -1):
         self.goal = goal
         self.status = ''
-        self.showing_status = ''
-        self.longest_status = 0
         self.bar_len = 60
         self.fill = '█'
         self.zfill = '-'
         self.decimals = 1
         self.formatter = lambda x: x
+        self.last_len = 0
 
     def set_status(self, status: str):
         if status == self.status:
             return
         self.status = status
-        self.longest_status = max(len(status), self.longest_status)
-        self.showing_status = status + ' ' * (self.longest_status - len(status))
 
     def update(self, count: int, status: str = ''):
         self.set_status(status)
@@ -34,8 +31,12 @@ class Progress:
         bar = self.fill * filled_len + self.zfill * (self.bar_len - filled_len)
 
         text = '[%s] %s%s | %s/%s' % (bar, percents, '%', self.formatter(count), self.formatter(self.goal))
-        if self.showing_status:
-            text += ' | %s' % self.showing_status
+        if self.status:
+            text += ' | %s' % self.status
+
+        padding = ' ' * (self.last_len - len(text))
+        self.last_len = len(text)
+        text += padding
 
         pos = getattr(self, 'pos', 0)
         self.move_to(pos)
